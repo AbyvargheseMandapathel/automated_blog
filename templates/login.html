@@ -7,62 +7,48 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 flex items-center justify-center min-h-screen">
-
   <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Login</h2>
-
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Login</h1>
     <form id="loginForm" class="space-y-4">
-      <!-- Email Input -->
+      <!-- Username Field -->
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          placeholder="Enter your email" 
+        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="Enter your username"
           required
         />
       </div>
 
-      <!-- Password Input -->
+      <!-- Password Field -->
       <div>
         <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-        <input 
-          type="password" 
-          id="password" 
-          name="password" 
-          placeholder="Enter your password" 
+        <input
+          type="password"
+          id="password"
+          name="password"
           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="Enter your password"
           required
         />
       </div>
 
-      <!-- Submit Button -->
-      <div>
-        <button 
-          type="submit" 
-          class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >
-          Login
-        </button>
-      </div>
+      <!-- Login Button -->
+      <button
+        type="submit"
+        class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      >
+        Login
+      </button>
     </form>
 
-    <!-- Forgot Password Link -->
-    <div class="mt-4 text-center">
-      <a href="#" class="text-sm text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
-    </div>
-
-    <!-- Sign Up Link -->
-    <div class="mt-4 text-center">
-      <p class="text-sm text-gray-600">
-        Don't have an account? 
-        <a href="#" class="text-indigo-600 hover:text-indigo-500">Sign up</a>
-      </p>
-    </div>
+    <!-- Error Message -->
+    <p id="errorMessage" class="mt-4 text-sm text-red-600 hidden">Invalid username or password.</p>
   </div>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
